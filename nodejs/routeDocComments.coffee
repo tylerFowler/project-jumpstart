@@ -23,6 +23,9 @@
  # Body Parameter w/ Default Value
  # @param { name } Type :default => defaultValue
 
+ # Body Parameter w/ Format
+ # @param { name } String :format => alphanumeric
+
  # Optional Parameter
  # @param { name } Type :optional
 
