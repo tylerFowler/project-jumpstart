@@ -1,0 +1,47 @@
+/**********************************
+  * A collection of useful mixins
+***********************************/
+
+.hidden { display: none !important; } // won't take up DOM space
+.hide { opacity: 0; } // will take up DOM space
+
+//// On Chrome an input click will outline the element in blue, turn this off
+@mixin disable-focus-outline {
+  &:focus { outline: none; }
+}
+
+
+@mixin center-vertically {
+  position: relative;
+  top: 50%;
+  @include transform(translateY(-50%));
+}
+
+// stop text from being selected when dragged over
+@mixin no-select {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  -webkit-cursor: default;
+  -moz-cursor: default;
+  -ms-cursor: default;
+  cursor: default;
+}
+
+
+@mixin strip-list-styles {
+  list-style-type: none;
+  padding: 0;
+}
+
+@mixin blended-text($color) {
+  background-color: $color;
+  color: darken($color, 60%);
+}
+
+@mixin firefox-only {
+  @-moz-document url-prefix() { @content; }
+}
