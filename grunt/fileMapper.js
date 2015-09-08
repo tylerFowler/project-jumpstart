@@ -67,7 +67,7 @@ function loadFileMappings(mapPath) {
   })
   .values()
   // map returns shallow array so we need to flatten it out and join all values
-  .reduce(function (memo, val) { return val; })
+  .reduce(function flattenValues(memo, v) { return _.extend(v, memo); })
   .value();
 }
 
