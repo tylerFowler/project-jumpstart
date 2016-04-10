@@ -1,43 +1,28 @@
 {
   "env": {
-    "browser": true,
-    "node": true
+    "browser": false,
+    "node": true,
+    "es6": true
   },
-  "ecmaFeatures": {
-    "arrowFunctions": true,
-    "binaryLiterals": true,
-    "blockBindings": true,
-    "classes": true,
-    "defaultParams": false,
-    "destructuring": false,
-    "forOf": false,
-    "generators": true,
-    "modules": true,
-    "objectLiteralComputedProperties": true,
-    "objectLiteralDuplicateProperties": false,
-    "objectLiteralShorthandMethods": true,
-    "objectLiteralShorthandProperties": true,
-    "spread": true,
-    "superInFunctions": true,
-    "templateStrings": true,
-    "jsx": true
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
   },
   "rules": {
     "strict": [0, "never"],
     "no-extra-strict": 0,
     "no-var": 0,
-
+    "no-confusing-arrow": 2,
     "no-shadow": 2,
     "no-shadow-restricted-names": 2,
     "no-unused-vars": [2, {
       "vars": "local",
       "args": "after-used"
     }],
-    "no-use-before-define": 2,
-
+    "no-use-before-define": 0,
     "comma-dangle": [2, "never"],
     "no-cond-assign": [2, "always"],
-    "no-console": 1,
+    "no-console": 0,
     "no-debugger": 1,
     "no-alert": 1,
     "no-constant-condition": 1,
@@ -58,8 +43,8 @@
     "use-isnan": 2,
     "block-scoped-var": 0,
 
-    "consistent-return": 2,
-    "curly": [2, "multi-line"],
+    "consistent-return": 0,
+    "curly": [2, "multi"],
     "default-case": 2,
     "dot-notation": [2, {
       "allowKeywords": true
@@ -88,7 +73,7 @@
     "no-param-reassign": 2,
     "no-proto": 2,
     "no-redeclare": 2,
-    "no-return-assign": 2,
+    "no-return-assign": 0,
     "no-script-url": 2,
     "no-self-compare": 2,
     "no-sequences": 2,
@@ -142,12 +127,12 @@
       "before": false,
       "after": true
     }],
-    "space-after-keywords": 2,
+    "keyword-spacing": 2,
     "space-before-blocks": 2,
     "space-before-function-paren": [2, "never"],
     "space-infix-ops": 2,
-    "space-return-throw-case": 2,
     "spaced-comment": [2, "always"],
     "no-multi-spaces": 0
   }
 }
+
