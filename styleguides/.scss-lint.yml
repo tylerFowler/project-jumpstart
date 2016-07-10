@@ -1,0 +1,17 @@
+scss_files: 'sass/**/*.scss'
+exclude: 'sass/lib/**'
+
+linters:
+  PropertySortOrder:
+    enabled: false
+  SingleLinePerSelector:
+    enabled: false
+  SelectorDepth:
+    max_depth: 5
+  NestingDepth:
+    max_depth: 5
+  IdSelector:
+    enabled: false
+  QualifyingElement:
+    allow_element_with_attribute: true
+    allow_element_with_class: true
