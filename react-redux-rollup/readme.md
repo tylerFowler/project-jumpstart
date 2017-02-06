@@ -8,3 +8,6 @@ A blank slate type project for a new frontend application using:
 - Rollup.js for bundling
 
 To use this simply copy the contents of this directory into your project directory and edit the package.json meta keys.
+
+## TODO
+- [ ] Create a Yeoman generator from this
