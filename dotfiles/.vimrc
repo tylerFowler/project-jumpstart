@@ -43,14 +43,7 @@ filetype off
 filetype plugin indent on
 
 """ Ignores """
-let NERDTreeIgnore = [ 'node_modules/', '\.git/', 'vendor/*', '.swp' ]
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|vendor'
-
-""" Key mappings """
-map <C-[> :NERDTreeToggle<CR>
-
-" NERDTree Customizations
-let NERDTreeShowHidden=1
 
 """ vim-go Customizations """
 let g:go_highlight_functions = 1
