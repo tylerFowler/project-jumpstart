@@ -23,7 +23,7 @@ set nowrap
 " File explorer settings
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
-let g:netrw_list_hide = '.*\.swp$,node_modules/.*'
+let g:netrw_list_hide = '.*\.swp$,node_modules/.*,.idea/.*,.git/.*'
 
 " Syntastic settings
 set statusline+=%#warningmsg#
