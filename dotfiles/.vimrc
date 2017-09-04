@@ -27,7 +27,6 @@ let g:netrw_list_hide = '.*\.swp$,node_modules/.*,.idea/.*,.git/.*'
 
 " Syntastic settings
 set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
