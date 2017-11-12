@@ -40,6 +40,21 @@ let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 let g:netrw_list_hide = '.*\.swp$,node_modules/.*,.idea/.*,.git/.*'
 
+" Syntastic settings
+set statusline+=%#warningmsg#
+set statusline+=%*
+
+" Use fzf
+set rtp+=/usr/local/opt/fzf
+nmap ; :FZF<CR>
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+let g:syntastic_javascript_checkers = [ 'eslint' ]
+
 " Better searching
 set incsearch
 set hlsearch
