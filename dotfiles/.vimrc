@@ -3,7 +3,14 @@ set t_Co=256 " needed to correctly set theme backgrounds
 let g:hybrid_custom_term_colors = 1
 colorscheme gruvbox
 set background=dark
+
+set showtabline=2
+
+" Status line
 set laststatus=2
+set statusline+=%y
+set statusline+=%t\ 
+set statusline+=%m
 
 set tabstop=2
 set softtabstop=2
@@ -20,22 +27,18 @@ set showmatch
 " set cursorline " TODO: change the cursorline color
 set nowrap
 
+" Omnifunc
+if has("autocmd")
+  autocmd Filetype java setlocal omnifunc=javacomplete2#Complete
+endif
+
+" Keymaps
+nnoremap <C-T> :GoTestFunc<CR>
+
 " File explorer settings
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 let g:netrw_list_hide = '.*\.swp$,node_modules/.*,.idea/.*,.git/.*'
-
-" Syntastic settings
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
-let g:syntastic_javascript_checkers = [ 'eslint' ]
 
 " Better searching
 set incsearch
@@ -69,4 +72,8 @@ let g:go_highlight_fields = 1
 let g:go_highlight_types = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_generate_tags = 1
 
