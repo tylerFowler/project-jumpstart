@@ -1,7 +1,7 @@
 " Theme
 set t_Co=256 " needed to correctly set theme backgrounds
 let g:hybrid_custom_term_colors = 1
-colorscheme gruvbox
+colorscheme colibri
 set background=dark
 
 set showtabline=2
