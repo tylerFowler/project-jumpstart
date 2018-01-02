@@ -71,6 +71,10 @@ au FileType go setl noexpandtab
 au FileType markdown set spell spelllang=en_us
 au FileType markdown set wrap
 au FileType markdown set nospell
+au FileType groovy setl noexpandtab
+
+" Recognize gradle syntax
+au BufNewFile,BufRead *.gradle set filetype=groovy
 
 " start pathogen Vim bundle manager
 execute pathogen#infect()
