@@ -37,13 +37,7 @@ set numberwidth=6
 set autoindent
 set smartindent
 set showmatch
-" set cursorline " TODO: change the cursorline color
 set nowrap
-
-" Omnifunc
-if has("autocmd")
-  autocmd Filetype java setlocal omnifunc=javacomplete2#Complete
-endif
 
 " Keymaps
 nnoremap <C-T> :GoTestFunc<CR>
@@ -75,7 +69,7 @@ set ignorecase
 
 " Show tabs as characters
 set list
-set listchars=tab:»\ 
+set listchars=tab:»\ ,trail:•
 
 " Trim empty lines on bottom of files when saving
 au BufWritePre *.txt $put _ | $;?\(^\s*$\)\@!?+1,$d
