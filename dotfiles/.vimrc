@@ -1,13 +1,10 @@
 " Theme
 set t_Co=256 " needed to correctly set theme backgrounds
-let g:hybrid_custom_term_colors = 1
+let g:darkscheme = "colibri"
+let g:lightscheme = "papercolor"
 
-" Dark scheme
-" colorscheme colibri
-" set background=dark
-
-" Light scheme
-colorscheme papercolor
+" set lightscheme by default
+exec "colorscheme ".g:lightscheme
 set background=light
 
 set showtabline=2
@@ -86,6 +83,11 @@ au BufNewFile,BufRead *.gradle set filetype=groovy
 execute pathogen#infect()
 filetype off
 filetype plugin indent on
+
+""" Commands """
+" Toggle between colorschemes
+command! DarkScheme :exec "colorscheme ".g:darkscheme | :set background=dark
+command! LightScheme :exec "colorscheme ".g:lightscheme | :set background=light
 
 """ Ignores """
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|vendor'
