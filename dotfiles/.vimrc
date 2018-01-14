@@ -11,9 +11,19 @@ set showtabline=2
 
 " Status line
 set laststatus=2
+set statusline+=\ \ \ " add some right padding
 set statusline+=%y
-set statusline+=%t\ 
+set statusline+=\ 
+set statusline+=%F
+set statusline+=\ %r
+set statusline+=\ 
 set statusline+=%m
+set statusline+=%=
+set statusline+=\ 
+set statusline+=Buf\ %n
+set statusline+=\ 
+set statusline+=[%l/%L\ \|\ %p%%]
+set statusline+=\ \ \  " add some right padding
 
 set tabstop=2
 set softtabstop=2
