@@ -4,8 +4,8 @@ let g:darkscheme = "colibri"
 let g:lightscheme = "papercolor"
 
 " set lightscheme by default
-exec "colorscheme ".g:lightscheme
-set background=light
+exec "colorscheme ".g:darkscheme
+set background=dark
 
 set showtabline=2
 
