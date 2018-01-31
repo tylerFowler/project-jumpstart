@@ -1,6 +1,6 @@
 " Theme
 set t_Co=256 " needed to correctly set theme backgrounds
-let g:darkscheme = "colibri"
+let g:darkscheme = "solarized"
 let g:lightscheme = "papercolor"
 
 " set lightscheme by default
