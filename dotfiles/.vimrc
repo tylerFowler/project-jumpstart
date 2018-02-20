@@ -1,11 +1,8 @@
 " Theme
 set t_Co=256 " needed to correctly set theme backgrounds
-let g:darkscheme = "solarized"
-let g:lightscheme = "papercolor"
-
-" set lightscheme by default
-exec "colorscheme ".g:darkscheme
-set background=dark
+let g:curtains_defaultscheme = "dark"
+let g:curtains_darkscheme = "solarized"
+let g:curtains_lightscheme = "papercolor"
 
 set showtabline=2
 
@@ -87,11 +84,6 @@ au BufNewFile,BufRead *.gradle set filetype=groovy
 execute pathogen#infect()
 filetype off
 filetype plugin indent on
-
-""" Commands """
-" Toggle between colorschemes
-command! DarkScheme :exec "colorscheme ".g:darkscheme | :set background=dark
-command! LightScheme :exec "colorscheme ".g:lightscheme | :set background=light
 
 """ Ignores """
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|vendor'
