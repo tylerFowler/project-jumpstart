@@ -1,11 +1,5 @@
 " Theme
 set t_Co=256 " needed to correctly set theme backgrounds
-let g:darkscheme = "solarized"
-let g:lightscheme = "papercolor"
-
-" set lightscheme by default
-exec "colorscheme ".g:darkscheme
-set background=dark
 
 set showtabline=2
 
@@ -41,6 +35,10 @@ set nowrap
 
 " Keymaps
 nnoremap <C-T> :GoTestFunc<CR>
+
+"" Ctrl+C while in visual mode to copy/paste to clipboard
+vnoremap <C-c> "+y<CR>
+noremap <C-v> :r !pbpaste<CR><CR>
 
 " File explorer settings
 let g:netrw_banner = 0
@@ -87,11 +85,6 @@ au BufNewFile,BufRead *.gradle set filetype=groovy
 execute pathogen#infect()
 filetype off
 filetype plugin indent on
-
-""" Commands """
-" Toggle between colorschemes
-command! DarkScheme :exec "colorscheme ".g:darkscheme | :set background=dark
-command! LightScheme :exec "colorscheme ".g:lightscheme | :set background=light
 
 """ Ignores """
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|vendor'
