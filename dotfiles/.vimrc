@@ -1,5 +1,8 @@
 " Theme
 set t_Co=256 " needed to correctly set theme backgrounds
+let g:curtains_defaultscheme = "dark"
+let g:curtains_darkscheme = "solarized"
+let g:curtains_lightscheme = "papercolor"
 
 set showtabline=2
 
