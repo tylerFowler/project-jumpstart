@@ -78,7 +78,7 @@ set list
 set listchars=tab:»\ ,trail:•
 
 " Trim empty lines on bottom of files when saving
-au BufWritePre *.txt $put _ | $;?\(^\s*$\)\@!?+1,$d
+au BufWritePre * $put _ | $;?\(^\s*$\)\@!?+1,$d
 
 au FileType go setl noexpandtab
 au FileType markdown set spell spelllang=en_us
