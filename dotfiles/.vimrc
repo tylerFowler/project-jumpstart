@@ -22,6 +22,9 @@ set statusline+=\
 set statusline+=[%l/%L\ \|\ %p%%]
 set statusline+=\ \ \ " add some right padding
 
+" character col width marker
+set colorcolumn=80
+
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
