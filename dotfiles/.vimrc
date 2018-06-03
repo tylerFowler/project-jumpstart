@@ -86,6 +86,8 @@ au FileType markdown set wrap
 au FileType markdown set nospell
 au FileType groovy setl noexpandtab
 
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
 " Recognize gradle syntax
 au BufNewFile,BufRead *.gradle set filetype=groovy
 
@@ -108,4 +110,3 @@ let g:go_highlight_extra_types = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_fields = 1
 let g:go_highlight_generate_tags = 1
-
