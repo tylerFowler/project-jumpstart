@@ -22,6 +22,11 @@ set statusline+=\
 set statusline+=[%l/%L\ \|\ %p%%]
 set statusline+=\ \ \ " add some right padding
 
+" character col width marker
+set colorcolumn=80
+au BufNewFile,BufRead *.java set colorcolumn=80,120
+au BufNewFile,BufRead *.html set colorcolumn=120
+
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
@@ -73,13 +78,15 @@ set list
 set listchars=tab:»\ ,trail:•
 
 " Trim empty lines on bottom of files when saving
-au BufWritePre *.txt $put _ | $;?\(^\s*$\)\@!?+1,$d
+au BufWritePre * $put _ | $;?\(^\s*$\)\@!?+1,$d
 
 au FileType go setl noexpandtab
 au FileType markdown set spell spelllang=en_us
 au FileType markdown set wrap
 au FileType markdown set nospell
 au FileType groovy setl noexpandtab
+
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " Recognize gradle syntax
 au BufNewFile,BufRead *.gradle set filetype=groovy
@@ -104,4 +111,3 @@ let g:go_highlight_extra_types = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_fields = 1
 let g:go_highlight_generate_tags = 1
-
