@@ -1,7 +1,7 @@
 " Theme
 set t_Co=256 " needed to correctly set theme backgrounds
-let g:curtains_defaultscheme = "dark"
-let g:curtains_darkscheme = "solarized"
+let g:curtains_defaultscheme = "light"
+let g:curtains_darkscheme = "gruvbox"
 let g:curtains_lightscheme = "papercolor"
 
 set showtabline=2
@@ -93,6 +93,7 @@ filetype plugin indent on
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|vendor'
 
 """ vim-go Customizations """
+let $GOPATH = "/Users/tylerfowler/go"
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_fields = 1
