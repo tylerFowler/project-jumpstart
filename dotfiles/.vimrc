@@ -78,7 +78,9 @@ set list
 set listchars=tab:»\ ,trail:•
 
 " Trim empty lines on bottom of files when saving
-au BufWritePre * $put _ | $;?\(^\s*$\)\@!?+1,$d
+" TODO this always moves our cursor to the bottom
+" on each save, super annoying
+" au BufWritePre * $put _ | $;?\(^\s*$\)\@!?+1,$d
 
 au FileType go setl noexpandtab
 au FileType markdown set spell spelllang=en_us
