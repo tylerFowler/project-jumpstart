@@ -104,6 +104,8 @@ let g:tagbar_width = 55
 """ vim-go Customizations """
 let $GOPATH = "/Users/tylerfowler/go"
 let g:go_highlight_functions = 1
+let g:go_highlight_function_calls = 1
+let g:go_highlight_function_arguments = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_fields = 1
 let g:go_highlight_types = 1
