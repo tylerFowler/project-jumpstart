@@ -42,9 +42,14 @@ set autoindent
 set smartindent
 set showmatch
 set nowrap
+set completeopt-=preview
 
 " Keymaps
 nnoremap <C-T> :GoTestFunc<CR>
+nnoremap <C-\> :TagbarToggle<CR>
+
+"" Use ctrl+space to trigger completion
+inoremap <C-@> <C-x><C-o>
 
 "" Ctrl+C while in visual mode to copy/paste to clipboard
 vnoremap <C-c> "+y<CR>
