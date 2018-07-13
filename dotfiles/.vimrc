@@ -23,9 +23,10 @@ set statusline+=\
 set statusline+=[%l/%L\ \|\ %p%%]
 set statusline+=\ \ \ " add some right padding
 
-" character col width marker
+" character col width ruler
 set colorcolumn=80
 au BufNewFile,BufRead *.java set colorcolumn=80,120
+au BufNewFile,BufRead *.go set colorcolumn=80,120
 au BufNewFile,BufRead *.html set colorcolumn=120
 
 set tabstop=2
