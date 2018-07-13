@@ -97,6 +97,10 @@ filetype plugin indent on
 """ Ignores """
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|vendor'
 
+""" Tagbar Customization """
+let g:tagbar_left = 1
+let g:tagbar_width = 55
+
 """ vim-go Customizations """
 let $GOPATH = "/Users/tylerfowler/go"
 let g:go_highlight_functions = 1
@@ -109,3 +113,32 @@ let g:go_highlight_extra_types = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_fields = 1
 let g:go_highlight_generate_tags = 1
+
+"" Go Tagbar config
+let g:tagbar_type_go = {
+  \ 'ctagstype' : 'go',
+  \ 'kinds'     : [
+    \ 'p:package',
+    \ 'i:imports:1',
+    \ 'c:constants',
+    \ 'v:variables',
+    \ 't:types',
+    \ 'n:interfaces',
+    \ 'w:fields',
+    \ 'e:embedded',
+    \ 'm:methods',
+    \ 'r:constructor',
+    \ 'f:functions'
+  \ ],
+  \ 'sro' : '.',
+  \ 'kind2scope' : {
+    \ 't' : 'ctype',
+    \ 'n' : 'ntype'
+  \ },
+  \ 'scope2kind' : {
+    \ 'ctype' : 't',
+    \ 'ntype' : 'n'
+  \ },
+  \ 'ctagsbin'  : 'gotags',
+  \ 'ctagsargs' : '-sort -silent'
+\ }
