@@ -1,5 +1,5 @@
 " Theme
-set t_Co=256 " needed to correctly set theme backgrounds
+set t_Co=256
 let g:curtains_defaultscheme = "light"
 let g:curtains_darkscheme = "gruvbox"
 let g:curtains_lightscheme = "papercolor"
