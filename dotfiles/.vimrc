@@ -79,6 +79,8 @@ set listchars=tab:»\ ,trail:•
 " au BufWritePre * $put _ | $;?\(^\s*$\)\@!?+1,$d
 
 au FileType go setl noexpandtab
+au FileType godoc setl wrap
+au FileType godoc setl colorcolumn=
 au FileType markdown set spell spelllang=en_us
 au FileType markdown set wrap
 au FileType markdown set nospell
@@ -100,6 +102,14 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|vendor'
 """ Tagbar Customization """
 let g:tagbar_left = 1
 let g:tagbar_width = 55
+
+""" YCM Options """
+let g:ycm_complete_in_strings = 0
+let g:ycm_complete_in_comments = 0
+
+" Disable the normal completion, instead only trigger after a
+" 'semantic trigger' like `.` or `->` or manually (ctrl+space)
+let g:ycm_min_num_of_chars_for_completion = 99
 
 """ vim-go Customizations """
 let $GOPATH = "/Users/tylerfowler/go"
