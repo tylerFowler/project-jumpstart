@@ -112,7 +112,6 @@ let g:ycm_complete_in_comments = 0
 let g:ycm_min_num_of_chars_for_completion = 99
 
 """ vim-go Customizations """
-let $GOPATH = "/Users/tylerfowler/go"
 let g:go_highlight_functions = 1
 let g:go_highlight_function_calls = 1
 let g:go_highlight_function_arguments = 1
