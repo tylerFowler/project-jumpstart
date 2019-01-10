@@ -1,8 +1,13 @@
 " Theme
-set t_Co=256
-let g:curtains_defaultscheme = "light"
-let g:curtains_darkscheme = "gruvbox"
-let g:curtains_lightscheme = "papercolor"
+"set t_Co=256
+let g:curtains_defaultscheme = "dark"
+let g:curtains_darkscheme = "one"
+let g:curtains_lightscheme = "one"
+
+if &diff
+  let g:curtains_defaultscheme = "light"
+  let g:curtains_lightscheme = "PaperColor"
+endif
 
 set showtabline=2
 
@@ -18,6 +23,7 @@ set statusline+=\
 set statusline+=%m
 set statusline+=%=
 set statusline+=\ 
+set statusline+=%{FugitiveStatusline()}\ 
 set statusline+=Buf\ %n
 set statusline+=\ 
 set statusline+=[%l/%L\ \|\ %p%%]
@@ -52,13 +58,16 @@ nnoremap <C-\> :TagbarToggle<CR>
 inoremap <C-@> <C-x><C-o>
 
 "" Ctrl+C while in visual mode to copy/paste to clipboard
-vnoremap <C-c> "+y<CR>
-noremap <C-v> :r !pbpaste<CR><CR>
+vnoremap <C-c> "+y :!xclip -f -sel clip<CR>
+noremap <C-v> :r !xclip -sel clip<CR><CR>
 
 " File explorer settings
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 let g:netrw_list_hide = '.*\.swp$,node_modules/.*,.idea/.*,.git/.*'
+
+" One colorscheme italic support
+let g:one_allow_italics = 1
 
 " Use fzf
 set rtp+=/usr/local/opt/fzf
@@ -101,18 +110,25 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|vendor'
 
 """ Tagbar Customization """
 let g:tagbar_left = 1
-let g:tagbar_width = 55
+let g:tagbar_width = 45
+
+""" Completor.vim Options """
+let g:completor_gocode_binary  = '~/go/src/gocode'
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <cr> pumvisible() ? "\<C-y>\<cr>" : "\<cr>"
 
 """ YCM Options """
 let g:ycm_complete_in_strings = 0
 let g:ycm_complete_in_comments = 0
+
+let g:ycm_gocode_binary_path = '~/go/bin/gocode'
 
 " Disable the normal completion, instead only trigger after a
 " 'semantic trigger' like `.` or `->` or manually (ctrl+space)
 let g:ycm_min_num_of_chars_for_completion = 99
 
 """ vim-go Customizations """
-let $GOPATH = "/Users/tylerfowler/go"
 let g:go_highlight_functions = 1
 let g:go_highlight_function_calls = 1
 let g:go_highlight_function_arguments = 1
@@ -154,3 +170,18 @@ let g:tagbar_type_go = {
   \ 'ctagsbin'  : 'gotags',
   \ 'ctagsargs' : '-sort -silent'
 \ }
+
+"Credit joshdick
+"Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
+"If you're using tmux version 2.2 or later, you can remove the outermost $TMUX check and use tmux's 24-bit color support
+"(see < http://sunaku.github.io/tmux-24bit-color.html#usage > for more information.)
+if (has("nvim"))
+  "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
+  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+endif
+"For Neovim > 0.1.5 and Vim > patch 7.4.1799 < https://github.com/vim/vim/commit/61be73bb0f965a895bfb064ea3e55476ac175162 >
+"Based on Vim patch 7.4.1770 (`guicolors` option) < https://github.com/vim/vim/commit/8a633e3427b47286869aa4b96f2bfc1fe65b25cd >
+" < https://github.com/neovim/neovim/wiki/Following-HEAD#20160511 >
+if (has("termguicolors"))
+  set termguicolors
+endif
