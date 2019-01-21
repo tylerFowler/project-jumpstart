@@ -34,6 +34,7 @@ set colorcolumn=80
 au BufNewFile,BufRead *.java set colorcolumn=80,120
 au BufNewFile,BufRead *.go set colorcolumn=80,120
 au BufNewFile,BufRead *.html set colorcolumn=120
+au BufNewFile,BufRead qf set colorcolumn=
 
 set tabstop=2
 set softtabstop=2
