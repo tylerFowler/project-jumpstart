@@ -50,6 +50,11 @@ set showmatch
 set nowrap
 set completeopt-=preview
 
+" Folding
+set foldmethod=syntax
+"" don't autofold everything on
+set nofoldenable
+
 " Keymaps
 nnoremap <C-T> :GoTestFunc<CR>
 nnoremap <C-\> :TagbarToggle<CR>
