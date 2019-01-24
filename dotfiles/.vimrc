@@ -34,7 +34,6 @@ set colorcolumn=80
 au BufNewFile,BufRead *.java set colorcolumn=80,120
 au BufNewFile,BufRead *.go set colorcolumn=80,120
 au BufNewFile,BufRead *.html set colorcolumn=120
-au BufNewFile,BufRead qf set colorcolumn=
 
 set tabstop=2
 set softtabstop=2
@@ -95,6 +94,7 @@ au FileType markdown set spell spelllang=en_us
 au FileType markdown set wrap
 au FileType markdown set nospell
 au FileType groovy setl noexpandtab
+au FileType qf setl colorcolumn=
 
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
