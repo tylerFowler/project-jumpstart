@@ -148,6 +148,10 @@ let g:go_highlight_operators = 1
 let g:go_highlight_fields = 1
 let g:go_highlight_generate_tags = 1
 
+"" Show type of current var
+let g:go_auto_type_info = 1
+let g:go_updatetiming = 1000 " ms
+
 "" Go Tagbar config
 let g:tagbar_type_go = {
   \ 'ctagstype' : 'go',
