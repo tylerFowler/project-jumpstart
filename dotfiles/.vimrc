@@ -98,6 +98,7 @@ au FileType godoc setl colorcolumn=
 au FileType markdown set spell spelllang=en_us
 au FileType markdown set wrap
 au FileType markdown set nospell
+au FileType text set wrap
 au FileType groovy setl noexpandtab
 au FileType qf setl colorcolumn=
 
