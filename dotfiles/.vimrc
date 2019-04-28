@@ -63,8 +63,8 @@ nnoremap <C-\> :TagbarToggle<CR>
 inoremap <C-@> <C-x><C-o>
 
 "" Ctrl+C while in visual mode to copy/paste to clipboard
-vnoremap <C-c> "+y :!xclip -f -sel clip<CR>
-noremap <C-v> :r !xclip -sel clip<CR><CR>
+vnoremap <C-c> "+y<CR>
+noremap <C-v> :r !pbpaste<CR><CR>
 
 " File explorer settings
 let g:netrw_banner = 0
@@ -111,9 +111,6 @@ au BufNewFile,BufRead *.gradle set filetype=groovy
 execute pathogen#infect()
 filetype off
 filetype plugin indent on
-
-""" Ignores """
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|vendor'
 
 """ Tagbar Customization """
 let g:tagbar_left = 1
