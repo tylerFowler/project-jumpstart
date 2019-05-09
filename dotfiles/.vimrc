@@ -135,7 +135,6 @@ let g:ycm_min_num_of_chars_for_completion = 99
 """ vim-go Customizations """
 let g:go_highlight_functions = 1
 let g:go_highlight_function_calls = 1
-let g:go_highlight_function_arguments = 1
 let g:go_highlight_function_parameters = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_fields = 1
