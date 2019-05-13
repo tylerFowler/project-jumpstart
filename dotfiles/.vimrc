@@ -147,9 +147,13 @@ let g:go_highlight_fields = 1
 let g:go_highlight_generate_tags = 1
 let g:go_test_show_name = 1
 
-"" Show type of current var
-let g:go_auto_type_info = 1
-let g:go_updatetiming = 1000 " ms
+"" Use goimports by default
+let g:go_fmt_command = "goimports"
+let g:go_fmt_options = "-local=github.com/BattleCry-Studios/bps/"
+
+"" can't use gopls.. doesn't seem to pick up my packages
+"" possibly because of incompatibility w/ go 1.10
+au FileType go setlocal omnifunc=go#complete#GocodeComplete
 
 "" Go Tagbar config
 let g:tagbar_type_go = {
