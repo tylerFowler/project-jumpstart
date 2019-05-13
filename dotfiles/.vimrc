@@ -51,10 +51,14 @@ set showmatch
 set nowrap
 set completeopt-=preview
 
-" Folding
-set foldmethod=syntax
-"" don't autofold everything on
-set nofoldenable
+" Make quickfix windows always take up the full bottom width of the screen,
+" as opposed to just the bottom of the rightmost window
+autocmd FileType qf wincmd J
+
+" " Folding
+" set foldmethod=syntax
+" "" don't autofold everything on
+" set nofoldenable
 
 " Keymaps
 nnoremap <C-T> :GoTestFunc<CR>
