@@ -1,7 +1,8 @@
 " Theme
-"set t_Co=256
+set t_Co=256
+
 let g:curtains_defaultscheme = "dark"
-let g:curtains_darkscheme = "one"
+let g:curtains_darkscheme = "two-firewatch"
 let g:curtains_lightscheme = "one"
 
 if &diff
