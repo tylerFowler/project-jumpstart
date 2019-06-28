@@ -56,6 +56,9 @@ set foldmethod=syntax
 "" don't autofold everything on
 set nofoldenable
 
+" Don't always resize other windows when closing one
+set noequalalways
+
 " Keymaps
 nnoremap <C-T> :GoTestFunc<CR>
 nnoremap <C-\> :TagbarToggle<CR>
